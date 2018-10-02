@@ -1,4 +1,0 @@
-import model SMEFT_alpha_UFO-diboson  # need restriction file in diboson_mining/cards/restrict-diboson.dat
-
-generate p p > w+ w- QCD=99 QED=99 NP=99, w+ > e+ ve NP=0, w- > mu- vm~ NP=0 
-add process p p > w+ w- QCD=99 QED=99 NP=99, w+ > mu+ vm NP=0, w- > e- ve~ NP=0
