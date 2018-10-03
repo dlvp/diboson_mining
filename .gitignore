@@ -114,3 +114,6 @@ venv.bak/
 
 # Data
 data
+
+# PDFs
+*.lhgrid
