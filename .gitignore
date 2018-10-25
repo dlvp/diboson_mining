@@ -117,3 +117,6 @@ data
 
 # PDFs
 *.lhgrid
+
+# Files that MG mysteriously creates
+py.py
