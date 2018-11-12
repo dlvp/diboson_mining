@@ -1,0 +1,9 @@
+
+        launch $2
+        shower=Pythia8
+        detector=OFF
+        analysis=OFF
+        madspin=OFF
+        reweight=ON
+        done
+        
