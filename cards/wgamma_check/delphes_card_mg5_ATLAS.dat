@@ -3,7 +3,7 @@
 #######################################
 
 set ExecutionPath {
- ParticlePropagator
+  ParticlePropagator
 
   ChargedHadronTrackingEfficiency
   ElectronTrackingEfficiency
