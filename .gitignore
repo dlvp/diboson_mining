@@ -121,3 +121,4 @@ data
 # Files that MG mysteriously creates
 py.py
 nsqso_born.inc
+ME5_debug
