@@ -48,8 +48,8 @@
 #*********************************************************************
 # PDF CHOICE: this automatically fixes also alpha_s and its evol.    *
 #*********************************************************************
-     nn23lo1    = pdlabel     ! PDF set                                     
-     230000    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
+     lhapdf    = pdlabel     ! PDF set
+     11000    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
 #*********************************************************************
 # Renormalization and factorization scales                           *
 #*********************************************************************
@@ -147,16 +147,16 @@
 #*********************************************************************
 # Minimum and maximum DeltaR distance                                *
 #*********************************************************************
- 0.0 = drjj    ! min distance between jets
- 0.0   = drbb    ! min distance between b's 
- 0.0 = drll    ! min distance between leptons
- 0.0 = draa    ! min distance between gammas
- 0.0   = drbj    ! min distance between b and jet 
- 0.0 = draj    ! min distance between gamma and jet
- 0.0 = drjl    ! min distance between jet and lepton
- 0.0   = drab    ! min distance between gamma and b 
- 0.0   = drbl    ! min distance between b and lepton 
- 0.0 = dral    ! min distance between gamma and lepton
+ 0.3 = drjj    ! min distance between jets
+ 0.0 = drbb    ! min distance between b's
+ 0.3 = drll    ! min distance between leptons
+ 0.3 = draa    ! min distance between gammas
+ 0.0 = drbj    ! min distance between b and jet
+ 0.3 = draj    ! min distance between gamma and jet
+ 0.3 = drjl    ! min distance between jet and lepton
+ 0.0 = drab    ! min distance between gamma and b
+ 0.0 = drbl    ! min distance between b and lepton
+ 0.3 = dral    ! min distance between gamma and lepton
  -1.0  = drjjmax ! max distance between jets
  -1.0  = drbbmax ! max distance between b's
  -1.0  = drllmax ! max distance between leptons

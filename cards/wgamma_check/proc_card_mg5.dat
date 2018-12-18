@@ -1,4 +1,0 @@
-import model SMWgamma_UFO
-define lep = e+ e- mu+ mu-
-define neu  = ve ve~ vm vm~
-generate p p > a lep neu NP=99 QED=99 QCD=99

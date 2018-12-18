@@ -29,7 +29,7 @@
 # Warning: Do not generate more than 1M events in a single run       *
 # If you want to run Pythia, avoid more than 50k events in a run.    *
 #*********************************************************************
-  100000 = nevents ! Number of unweighted events requested
+  10000 = nevents ! Number of unweighted events requested 
   0   = iseed   ! rnd seed (0=assigned automatically=default))
 #*********************************************************************
 # Collider type and energy                                           *
@@ -48,8 +48,8 @@
 #*********************************************************************
 # PDF CHOICE: this automatically fixes also alpha_s and its evol.    *
 #*********************************************************************
-     lhapdf    = pdlabel     ! PDF set
-     11000    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
+     nn23lo1    = pdlabel     ! PDF set                                     
+     230000    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
 #*********************************************************************
 # Renormalization and factorization scales                           *
 #*********************************************************************
@@ -61,13 +61,9 @@
  -1 = dynamical_scale_choice ! Choose one of the preselected dynamical choices
  1.0  = scalefact        ! scale factor for event-by-event scales
 #*********************************************************************
-# Type and output format
+# Time of flight information. (-1 means not run)
 #*********************************************************************
-  False     = gridpack  !True = setting up the grid pack
-  -1.0 = time_of_flight ! threshold (in mm) below which the invariant livetime is not written (-1 means not written)
-  3.0 = lhe_version       ! Change the way clustering information pass to shower.        
-  True = clusinfo         ! include clustering tag in output
-  sum =  event_norm       ! average/sum. Normalization of the weight in the LHEF
+ -1.0 = time_of_flight ! threshold below which info is not written
 #*********************************************************************
 # Matching - Warning! ickkw > 1 is still beta
 #*********************************************************************
@@ -77,7 +73,9 @@
  1.0 = alpsfact         ! scale factor for QCD emission vx
  False = chcluster        ! cluster only according to channel diag
  True = pdfwgt           ! for ickkw=1, perform pdf reweighting
- 4 = asrwgtflavor     ! highest quark flavor for a_s reweight    
+ 4 = asrwgtflavor     ! highest quark flavor for a_s reweight
+ True = clusinfo         ! include clustering tag in output
+ 3.0 = lhe_version       ! Change the way clustering information pass to shower.        
 #*********************************************************************
 #**********************************************************
 #
@@ -85,7 +83,7 @@
 # Automatic ptj and mjj cuts if xqcut > 0
 # (turn off for VBF and single top processes)
 #**********************************************************
-   False  = auto_ptj_mjj  ! Automatic setting of ptj and mjj
+   True  = auto_ptj_mjj  ! Automatic setting of ptj and mjj
 #**********************************************************
 #                                                                    
 #**********************************
@@ -111,15 +109,15 @@
 #*********************************************************************
 # Minimum and maximum pt's (for max, -1 means no cut)                *
 #*********************************************************************
- 15.0  = ptj       ! minimum pt for the jets
+ 20.0  = ptj       ! minimum pt for the jets 
  0.0  = ptb       ! minimum pt for the b 
- 800.0 = pta       ! minimum pt for the photons
- 15.0  = ptl       ! minimum pt for the charged leptons
+ 440 = pta       ! minimum pt for the photons 
+ 10.0  = ptl       ! minimum pt for the charged leptons 
  0.0  = misset    ! minimum missing Et (sum of neutrino's momenta)
  0.0  = ptheavy   ! minimum pt for one heavy final state
  -1.0  = ptjmax    ! maximum pt for the jets
  -1.0  = ptbmax    ! maximum pt for the b
- 1100.0 = ptamax       ! maximum pt for the photons
+ 550 = ptamax       ! maximum pt for the photons 
  -1.0  = ptlmax    ! maximum pt for the charged leptons
  -1.0  = missetmax ! maximum missing Et (sum of neutrino's momenta)
 #*********************************************************************
@@ -136,10 +134,10 @@
 #*********************************************************************
 # Maximum and minimum absolute rapidity (for max, -1 means no cut)   *
 #*********************************************************************
- 6.0 = etaj    ! max rap for the jets
+  5.0 = etaj    ! max rap for the jets 
   -1.0  = etab    ! max rap for the b
- 3.0  = etaa    ! max rap for the photons
- 3.0  = etal    ! max rap for the charged leptons
+ 2.5  = etaa    ! max rap for the photons 
+ 2.5  = etal    ! max rap for the charged leptons 
  0.0  = etajmin ! min rap for the jets
  0.0  = etabmin ! min rap for the b
  0.0  = etaamin ! min rap for the photons
@@ -147,16 +145,16 @@
 #*********************************************************************
 # Minimum and maximum DeltaR distance                                *
 #*********************************************************************
- 0.3 = drjj    ! min distance between jets
- 0.0 = drbb    ! min distance between b's
- 0.3 = drll    ! min distance between leptons
- 0.3 = draa    ! min distance between gammas
- 0.0 = drbj    ! min distance between b and jet
- 0.3 = draj    ! min distance between gamma and jet
- 0.3 = drjl    ! min distance between jet and lepton
- 0.0 = drab    ! min distance between gamma and b
- 0.0 = drbl    ! min distance between b and lepton
- 0.3 = dral    ! min distance between gamma and lepton
+ 0.4 = drjj    ! min distance between jets 
+ 0.0   = drbb    ! min distance between b's 
+ 0.4 = drll    ! min distance between leptons 
+ 0.4 = draa    ! min distance between gammas 
+ 0.0   = drbj    ! min distance between b and jet 
+ 0.4 = draj    ! min distance between gamma and jet 
+ 0.4 = drjl    ! min distance between jet and lepton 
+ 0.0   = drab    ! min distance between gamma and b 
+ 0.0   = drbl    ! min distance between b and lepton 
+ 0.4 = dral    ! min distance between gamma and lepton 
  -1.0  = drjjmax ! max distance between jets
  -1.0  = drbbmax ! max distance between b's
  -1.0  = drllmax ! max distance between leptons
@@ -270,7 +268,7 @@
 #          meaningful ONLY if plotted taking matchscale              *
 #          reweighting into account!                                 *
 #*********************************************************************
-   False  = use_syst      ! Enable systematics studies
+   True  = use_syst      ! Enable systematics studies
 #
 #**************************************
 # Parameter of the systematics study
