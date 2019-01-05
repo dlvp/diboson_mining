@@ -1,0 +1,66 @@
+digraph {
+	graph [size="12,12"]
+	node [align=left fontsize=12 height=0.2 ranksep=0.1 shape=box style=filled]
+	4910514752 [label=MulBackward fillcolor=darkolivegreen1]
+	4910514584 -> 4910514752
+	4910514584 [label=ThAddBackward]
+	4910517552 -> 4910514584
+	4910517552 [label=MseLossBackward]
+	4910514360 -> 4910517552
+	4910514360 [label=ThMulBackward]
+	4910514304 -> 4910514360
+	4910514304 [label=ExpBackward]
+	4910517104 -> 4910514304
+	4910517104 [label=NegBackward]
+	4910515256 -> 4910517104
+	4910515256 [label=ClampBackward]
+	4910515088 -> 4910515256
+	4910515088 [label=ThAddmmBackward]
+	4910516712 -> 4910515088
+	4910516712 [label=ExpandBackward]
+	4910516768 -> 4910516712
+	4910516768 [label="layers.2.bias
+ (1)" fillcolor=lightblue]
+	4910516656 -> 4910515088
+	4910516656 [label=TanhBackward]
+	4910557280 -> 4910516656
+	4910557280 [label=ThAddmmBackward]
+	4910693176 -> 4910557280
+	4910693176 [label=ExpandBackward]
+	4910693232 -> 4910693176
+	4910693232 [label="layers.1.bias
+ (100)" fillcolor=lightblue]
+	4910694240 -> 4910557280
+	4910694240 [label=TanhBackward]
+	4910693344 -> 4910694240
+	4910693344 [label=ThAddmmBackward]
+	4910693120 -> 4910693344
+	4910693120 [label=ExpandBackward]
+	4910692336 -> 4910693120
+	4910692336 [label="layers.0.bias
+ (100)" fillcolor=lightblue]
+	4910692784 -> 4910693344
+	4910692784 [label=TBackward]
+	4910692392 -> 4910692784
+	4910692392 [label="layers.0.weight
+ (100, 35)" fillcolor=lightblue]
+	4910694128 -> 4910557280
+	4910694128 [label=TBackward]
+	4910693008 -> 4910694128
+	4910693008 [label="layers.1.weight
+ (100, 100)" fillcolor=lightblue]
+	4910514528 -> 4910515088
+	4910514528 [label=TBackward]
+	4910692840 -> 4910514528
+	4910692840 [label="layers.2.weight
+ (1, 100)" fillcolor=lightblue]
+	4910514696 -> 4910514584
+	4910514696 [label=MseLossBackward]
+	4910514472 -> 4910514696
+	4910514472 [label=ThMulBackward]
+	4910516992 -> 4910514472
+	4910516992 [label=ExpBackward]
+	4910515984 -> 4910516992
+	4910515984 [label=ClampBackward]
+	4910515088 -> 4910515984
+}
