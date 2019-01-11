@@ -27,8 +27,8 @@ def train(
         grad_x_regularization=None,
         base_dir='/scratch/jb6504/diboson_mining/',
 ):
-    sample_dir = base_dir + 'data/samples/wgamma_sys/'
-    model_dir = base_dir + 'data/models/wgamma_sys/'
+    sample_dir = base_dir + 'samples/'
+    model_dir = base_dir + 'models/'
 
     # Labels
     cut_label = '_tight' if tight_cuts else ''
