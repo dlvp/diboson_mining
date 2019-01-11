@@ -7,7 +7,7 @@
 #SBATCH --mem=61GB
 #SBATCH --time=3-00:00:00
 
-source activate higgs_inference
-cd /scratch/jb6504/diboson_mining/cluster
+source activate madminer
+cd /scratch/jb6504/diboson_mining/scripts
 
-python -v ./train.py alices_all_tight_${SLURM_ARRAY_TASK_ID} alices ${SLURM_ARRAY_TASK_ID} --alpha 0.0001
+python -u ./train.py alices_all_tight_${SLURM_ARRAY_TASK_ID} alices ${SLURM_ARRAY_TASK_ID} --alpha 0.0001
